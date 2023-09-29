@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Web</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap"
+        rel="stylesheet">
+
+</head>
+    
+<body>
+    <div id="header">
+    
+        <div id="title">
+            <h1 class="title-text">Some webpage</h1>
+    
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i id="btn"><img src="./assets/menu-regular-24.png" alt="Icone do menu">Menu</i>
+                <i id="cancel"><img src="./assets/x-regular-24.png" alt="Icone de fechar"></i>
+            </label>
+            
+            <div class="sidebar">
+                <header>Meu Menu</header>
+                <a href="#" class="active">
+                    <i>
+                        <img src="./assets/menu-regular-24.png" alt="Icone do menu">
+                        <span>Painel</span>
+                    </i>
+                </a>
+                <a href="#" id="abrirPostar">
+                    <i>
+                        <img src="./assets/add-to-queue-regular-24.png" alt="Icone de postar">
+                        <span>Postar</span>
+                    </i>
+                </a>
+                <a href="#" id="abrirPesquisa">
+                    <i>
+                        <img src="./assets/search-alt-regular-24.png" alt="Icone de buscar">
+                        <span>Buscar</span>
+                    </i>
+                </a>
+            </div>
+            
+            <div class="icons-grid">
+                <img class="icons" src="./assets/facebook-square-logo-24.png" alt="Icone do facebook">
+                <img class="icons" src="./assets/twitter-logo-24.png" alt="Icone do twitter">
+                <img class="icons" src="./assets/instagram-alt-logo-24.png" alt="Icone do instagram">
+                <img class="icons" src="./assets/github-logo-24.png" alt="Icone do github">
+                <img class="icons" src="./assets/linkedin-square-logo-24.png" alt="Icone do linkedin">
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal">
+        <form id="modal-content" >
+            <span class="close" id="fecharPostar"><img class="close" src="./assets/x-regular-24.png" alt="Icone de fechar"></span>
+
+            <input type="text" id="input-titulo" placeholder="Digite um título" required>
+            <div id="contador-caracteres">30 caracteres restantes</div>
+            <input type="text" id="input-descricao" placeholder="Digite uma descrição" required>
+
+            <button type="submit" id="submit" class="fazer-postagem">POSTAR</button>
+        </form>
+    </div> 
+
+    <dl id="posts">
+    </dl>
+    
+
+    <div id="busca">
+        <form action="" id="busca-content">
+            <span class="close" id="fecharPesquisa"><img class="close" src="./assets/x-regular-24.png" alt="Icone de fechar"></span>
+            
+            <input type="text" name="pesquisaNome" id="pesquisaNome">
+            <input type="date" name="pesquisaData" id="pesquisaData">
+            <button type="submit" id="pesquisar" onclick="searchPost(event)">Pesquisar</button>
+        </form>
+        <div id="buscado">
+
+        </div>
+    </div>
+</body>
+
+<script src="./javascript/posts.js"></script>
+<script src="./javascript/modal.js"></script>
+
+</html>
